@@ -1,4 +1,4 @@
-﻿try
+try
 {
     Console.Write("Введите n:");
     int n = int.Parse(Console.ReadLine());
@@ -6,8 +6,15 @@
 
     for (int k = 1; k <= n; k++)
     {
-        if (Q == Math.Pow(-1, k) * (k - 7) / (2 * (n - k)));
-        
+        double fact = 1;
+        for (int i = 1; i <= 2*(n - k); i++)
+        {
+            fact *= i;
+        }
+
+         Q = Math.Pow(-1, k) * (k - 7) /  fact;
+
+      
     }
 
     Console.WriteLine($"Q={Q:F2}");
